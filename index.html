@@ -34,7 +34,31 @@
 </nav>
 <main>
     <h2> Rescuing Sea Turtles</h2>
-    <img src="images/Sea_Turtle_Rescue_(15129806892).jpg" style="border: 10px solid cornsilk;text-align: center;" width="33%" alt="People rescuing a sea turtle">
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="images/Sea_Turtle_Rescue_(15129806892).jpg" style="width:100%">
+          <div class="text"> A sea turtle being rescued</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="" style="width:100%">
+          <div class="text">&#128034;</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="" style="width:100%">
+          <div class="text">&#128034;</div>
+        </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
     <br><a href="https://commons.wikimedia.org/wiki/Category:Images"> Image from wikimedia commons</a>
     <p id="columns"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam arcu lorem, aliquet ac vulputate nec, mollis a metus. Mauris fermentum euismod ante. Cras dapibus nibh eget commodo suscipit. Vestibulum congue, enim sed tincidunt aliquet, sapien dui condimentum nunc, id fringilla ipsum lorem ut massa. Duis faucibus tristique vestibulum. Fusce vitae iaculis urna. Mauris feugiat nec leo sed iaculis. Nam quis elementum urna. Sed sit amet placerat augue. Aenean aliquet felis vel fermentum pellentesque. Suspendisse consequat urna sed lacinia laoreet.
 
@@ -48,6 +72,28 @@
         <br>
         <br>
     </main>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 7000); // Change image every 7 seconds
+}
+</script>
 <footer>
     <p> This Site is a College Project. &copy; 2023</p>
 </footer>
