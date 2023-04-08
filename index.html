@@ -8,15 +8,21 @@
     <meta name="author" content="Megan">
     <link rel="icon" href="images/favicon.ico" type="image/gif" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="styles/turtlestyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet"> 
     <style>
         body {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             background-color: darkcyan;
             margin:0px;
-            background-image: url(Images/pexels-lucas-meneses-6144105.jpg);  
+            background-image: url(Images/pexels-lucas-meneses-6144105.jpg);   
         }
     </style>
-<link rel="stylesheet" type="text/css" href="styles/turtlestyle.css">
+
 <title> Turtle Conservation </title>
 </head>
 <body>
@@ -34,60 +40,40 @@
 </nav>
 <main>
     <h2> Rescuing Sea Turtles</h2>
-    <section class="flexbox">
-    <section class="slideshow-container">
-
-        <section class="mySlides fade">
-          <img src="images/Sea_Turtle_Rescue_(15129806892).jpg" style="width:30%">
-          <section class="text"><a href="https://commons.wikimedia.org/wiki/Category:Images"> <br>Image from wikimedia commons</a> A sea turtle being rescued</section>
-          </section>
-        
-        <section class="mySlides fade">
-          <img src="images/ocg-saving-the-ocean-bWAArZ5M4Ag-unsplash.jpg" style="width:30%">
-          <section class="text"><br> Volunteers cleaning up a beach<a href="https://unsplash.com/"> <br>Image from unsplash</a></section>
-        </section>
-        
-        <section class="mySlides fade">
-          <img src="images/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" style="width:30%">
-          <section class="text">Plastic Rubbish in the ocean<a href="https://unsplash.com/"> <br> Image from unsplash</a></section>
-          </section>
-        <br>
-        
-        <section style="text-align:center">
-          <span class="dot"></span> 
-          <span class="dot"></span> 
-          <span class="dot"></span> 
-        </section>
-
-        <article><p> text text text text</p></article>
-        </section>
-        
-        </main>
-    
-
-<script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 7000); // Changes image every 7 seconds
-}
-</script>
+    <section class="w3-container">
+    <img class="slide" src="images/Sea_Turtle_Rescue_(15129806892).jpg" style="text-align: center;" width="33%">
+    <img class="slide" src="images/marc-andre-julien-PaDlCIsJOSA-unsplash.jpg">
+    <img class="slide" src="images/shaafi-ali-LaXbDd7Lkxw-unsplash.jpg">
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    </section>
+        <article><p>Six of the seven species of sea turtles that swim the planet’s waters—leatherback, loggerhead, Kemp’s ridley, green, olive ridley, and hawksbill—are found in every ocean except the Arctic and Antarctic. The seventh, the flatback, lives only in the waters around Australia.</p>
+        <p>The leatherback is the largest sea turtle and can weigh a whopping 2,000 pounds. It’s also the only sea turtle that doesn’t have a hard, bony shell. Its carapace is somewhat flexible and almost rubbery to the touch. The shells of other sea turtles are made of thick plates called scutes.</p>
+      <p>Six of the seven sea turtle species are classified as threatened, endangered, or critically endangered, due largely to human impact in the form of hunting, bycatch in fishing nets, pollution, and climate change.</p></article>
+      <p> More information about turtles is available on <a href="https://www.nationalgeographic.com/animals/reptiles/facts/sea-turtles"> at National Geographic</a></p>
+      
+ </main>   
 <footer>
     <p> This Site is a College Project. &copy; 2023</p>
 </footer>
 </body>
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("slide");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
 </html>
