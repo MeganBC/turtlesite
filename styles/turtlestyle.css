@@ -1,6 +1,5 @@
 
 header {
-    
     background-color: cornsilk;
     width: 100%;
     margin: 0;
@@ -10,10 +9,8 @@ header {
 h1 {
     text-align: center;
     font-size: 70px;
-    font-family: 'Ultra', serif;
-    
+    font-family: 'Ultra', serif;   
 }
-
 main {
     text-align: center;
     margin-bottom:80px;
@@ -46,21 +43,9 @@ nav ul li a {
     text-decoration: none;
 }
 article {
-  padding: 3px;
-  margin: 5px;
   column-count: 3;
-  column-gap: 5px;
   column-rule-style: groove;
   column-width: 2px;
-}
-.slide {
-  width: 33%;
-  border-style: groove;
-  border-color: rgb(87, 133, 189);
-  border-radius: 5px;
-  margin:5px;
-  display: none;
-
 }
 footer {
     background-color: cornsilk;
@@ -68,6 +53,9 @@ footer {
     bottom: 0;
     position: fixed;
     border-radius: 5px;
-    width: 100%;
-    
+    width: 100%;  
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
 }

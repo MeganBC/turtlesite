@@ -40,12 +40,25 @@
 </nav>
 <main>
     <h2> Rescuing Sea Turtles</h2>
-    <section class="w3-container">
-    <img class="slide" src="images/Sea_Turtle_Rescue_(15129806892).jpg" style="text-align: center;" width="33%">
-    <img class="slide" src="images/marc-andre-julien-PaDlCIsJOSA-unsplash.jpg">
-    <img class="slide" src="images/shaafi-ali-LaXbDd7Lkxw-unsplash.jpg">
-    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    <section class="flex-container">
+    <section class="w3-card-4" style="width: 33%; margin: 10px;">
+        <img src="images/marc-andre-julien-PaDlCIsJOSA-unsplash.jpg" style="width:100%;">
+        <section class="w3-container w3-center" style="background-color: cornsilk;">
+            <p> Baby Turtles making their way to the sea</p>
+        </section>
+    </section>
+    <section class="w3-card-4" style="width: 33%; margin: 10px;">
+        <img src="images/marc-andre-julien-PaDlCIsJOSA-unsplash.jpg" style="width:100%;">
+        <section class="w3-container w3-center" style="background-color: cornsilk;">
+            <p> Baby Turtles making their way to the sea</p>
+        </section>
+    </section>
+    <section class="w3-card-4" style="width: 33%; margin: 10px;">
+        <img src="images/marc-andre-julien-PaDlCIsJOSA-unsplash.jpg" style="width:100%;">
+        <section class="w3-container w3-center" style="background-color: cornsilk;">
+            <p> Baby Turtles making their way to the sea</p>
+        </section>
+    </section>
     </section>
         <article><p>Six of the seven species of sea turtles that swim the planet’s waters—leatherback, loggerhead, Kemp’s ridley, green, olive ridley, and hawksbill—are found in every ocean except the Arctic and Antarctic. The seventh, the flatback, lives only in the waters around Australia.</p>
         <p>The leatherback is the largest sea turtle and can weigh a whopping 2,000 pounds. It’s also the only sea turtle that doesn’t have a hard, bony shell. Its carapace is somewhat flexible and almost rubbery to the touch. The shells of other sea turtles are made of thick plates called scutes.</p>
@@ -57,23 +70,4 @@
     <p> This Site is a College Project. &copy; 2023</p>
 </footer>
 </body>
-<script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-    
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-    
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("slide");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
-      }
-      x[slideIndex-1].style.display = "block";  
-    }
-    </script>
 </html>
